@@ -8,19 +8,19 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import TablePagination from '@mui/material/TablePagination';
 
-function createData(id, title, body) {
-  return { id, title, body };
+function createData(id, title, completed) {
+  return { id, title, completed };
 }
 
 const rows = [
-  createData(1, 'post 1', 'body 1'),
-  createData(2, 'post 2', 'body 2'),
-  createData(3, 'post 3', 'body 3'),
-  createData(4, 'post 4', 'body 4'),
-  createData(5, 'post 5', 'body 5'),
+  createData(1, 'todo 1', true),
+  createData(2, 'todo 2', false),
+  createData(3, 'todo 3', true),
+  createData(4, 'todo 4', false),
+  createData(5, 'todo 5', true),
 ];
 
-export default function Post() {
+export default function Todos() {
 
   const [page, setPage] = React.useState(2);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -42,7 +42,7 @@ export default function Post() {
             <TableRow>
               <TableCell>Id</TableCell>
               <TableCell>Title</TableCell>
-              <TableCell>Body</TableCell>
+              <TableCell>Completed</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -55,7 +55,7 @@ export default function Post() {
                   {row.id}
                 </TableCell>
                 <TableCell>{row.title}</TableCell>
-                <TableCell>{row.body}</TableCell>
+                <TableCell>{row.completed ? 'Completed' : 'New'}</TableCell>
               </TableRow>
             ))}
           </TableBody>

@@ -1,8 +1,31 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- custom hook
+- UI Component (anything you want)
 
-Currently, two official plugins are available:
+## API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- albums:https://jsonplaceholder.typicode.com/albums?_limit=5&_page=1
+- todos: https://jsonplaceholder.typicode.com/todos?_limit=5&_page=1
+- posts: https://jsonplaceholder.typicode.com/posts?_limit=5&_page=1
+
+## Table Column
+
+#### Albums: id, title
+
+![alt text](./src/assets/albums.png)
+
+#### Todos: id, title, completed
+
+![alt text](./src/assets/todos.png)
+
+#### Posts: id, title, body
+
+![alt text](./src/assets/posts.png)
+
+# Requirement
+
+### Tasks
+
+- show table data
+- allow pagination (limit, prev page, next page)

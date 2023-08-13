@@ -7,6 +7,8 @@ import Box from '@mui/material/Box';
 
 // components
 import Post from './pages/Post';
+import Albums from './pages/Albums';
+import Todos from './pages/Todos';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,10 +63,10 @@ export default function App() {
         <Post />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Todos
+        <Todos />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Albums
+        <Albums />
       </CustomTabPanel>
     </Box>
   );
